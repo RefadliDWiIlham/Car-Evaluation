@@ -8,7 +8,9 @@
 Estimasi harga ponsel ini boleh digunakan sebagai patokan bagi semua orang yang ingin membeli atau menjual ponsel
 ## Business Understanding
 
-Lebih menghemat waktu agar tidak perlu menanyakan harga yang cocok untuk menjual atau membeli ponsel
+Industri otomotif  berkembang seiring dengan perubahan kebutuhan konsumen akan kendaraan pribadi.
+Evaluasi kendaraan merupakan aspek penting dalam proses  keputusan kelas yang baik bagi konsumen individu maupun bisnis.
+Oleh karena itu, diperlukan suatu metode evaluasi yang komprehensif yang dapat memberikan informasi yang akurat kepada konsumen untuk menjamin kepuasan dan nilai investasi yang optimal.
 
 Bagian laporan ini mencakup:
 
