@@ -107,14 +107,19 @@ sns.heatmap(df.isnull())
 ```
 ![image](ml1.png)
 ```python
-
+sns.countplot(data=df,x='vhigh',hue='unacc')
+plt.xticks(rotation=45, ha='right');
 ```
+![image](ml2.png)
 ```python
-
+sns.countplot(data=df,x='vhigh.1',hue='unacc')
+plt.xticks(rotation=45, ha='right');
 ```
+![image](ml3.png)
 ```python
-
+sns.histplot(x="class",data=df ,color = 'rosybrown')
 ```
+![image](ml4.png)
 ```python
 
 ```
