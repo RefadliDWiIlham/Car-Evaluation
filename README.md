@@ -44,3 +44,31 @@ safety     = keamanan
 class      = kelas
 ## Data Preparation
 # IMPORT DATASET
+```python
+from google.colab import files
+files.upload()
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
