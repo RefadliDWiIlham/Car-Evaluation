@@ -4,8 +4,7 @@
 ### Kelas : Pagi B
 
 ## Domain Proyek
-
-Estimasi harga ponsel ini boleh digunakan sebagai patokan bagi semua orang yang ingin membeli atau menjual ponsel
+Evaluasi Mobil ini bisa digunakan sebagai patokan bagi semua yang ingin mengetahui penilaian kelas yang sesuai dengan kebutuhan konsumen maupun bisnis untuk menjamin kepuasanmya
 ## Business Understanding
 
 Industri otomotif  berkembang seiring dengan perubahan kebutuhan konsumen akan kendaraan pribadi.
@@ -31,19 +30,17 @@ Perusahaan juga bertujuan untuk meningkatkan pengalaman pemilihan kelas mobil ba
     - Model yang dihasilkan dari datasets itu menggunakan metode Linear Regression.
 
 ## Data Understanding
-Dataset yang saya gunakan berasal jadi Kaggle yang berisi Harga yang cocok untuk membeli atau menjual ponsel.Dataset ini mengandung 162 baris dan lebih dari 14 columns.
+Dataset yang saya gunakan berasal jadi Kaggle yang berisi Kelas Evaluasi Mobil.Dataset ini mengandung 1726 baris dan lebih dari 7 columns.
 
-kaggle datasets download -d mohannapd/mobile-price-prediction 
+https://www.kaggle.com/datasets/elikplim/car-evaluation-data-set
 
 ### Variabel-variabel sebagai berikut:
-- Sale  : Penjualan Ponsel(int64)
-- weight    : Berat Ponsel(int64)
-- ppi       : Ukuran Resolusi Pada Layar Ponsel(int64)
-- cpu core  : Processor CPU(int64)
-- ram       : memori jangka pendek(int64)
-- Front_Cam : Kamera Depan(int64)
-- battery   : Penyimpan Daya Listrik(int64)
-- thickness : Ketebalan Ponsel(int64)
-- price     : Harga Ponsel(int64)
-
+Buying     = Pembelian
+maint      = pemeliharaan
+doors      = pintu
+persons    = orang
+lug_boot   =
+safety     = keamanan
+class      = kelas
 ## Data Preparation
+##IMPORT DATASET
