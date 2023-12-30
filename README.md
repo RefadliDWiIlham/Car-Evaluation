@@ -49,17 +49,33 @@ from google.colab import files
 files.upload()
 ```
 ```python
-
+!mkdir -p ~/.kaggle
+!cp kaggle.json ~/.kaggle/kaggle.json
+!chmod 600 ~/.kaggle/kaggle.json
+!ls ~/.kaggle
 ```
 ```python
-
+!kaggle datasets download -d elikplim/car-evaluation-data-set
 ```
 ```python
-
+!mkdir car-evaluation-data-set
+!unzip car-evaluation-data-set.zip -d car-evaluation-data-set
+!ls car-evaluation-data-set
 ```
+# IMPORT LIBRARY
 ```python
-
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pickle
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import tree
 ```
+# DATA DISCOVERY
 ```python
 
 ```
