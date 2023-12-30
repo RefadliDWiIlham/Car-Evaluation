@@ -77,6 +77,54 @@ from sklearn import tree
 ```
 # DATA DISCOVERY
 ```python
+df = pd.read_csv('car-evaluation-data-set/car_evaluation.csv')
+df.sample()
+```
+```python
+df.head()
+```
+```python
+df.describe()
+```
+```python
+df.info()
+```
+```python
+df.isna().sum()
+```
+```python
+df.nunique()
+```
+```python
+df.duplicated().sum()
+```
+```python
+df
+```
+# EDA
+```python
+sns.heatmap(df.isnull())
+```
+![image](ml1.png)
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
 
 ```
 ```python
