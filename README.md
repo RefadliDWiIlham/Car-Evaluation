@@ -121,8 +121,9 @@ sns.histplot(x="class",data=df ,color = 'rosybrown')
 ```
 ![image](ml4.png)
 ```python
-
+df['class'].value_counts().plot(kind='bar')
 ```
+![image](ml5.png)
 ```python
 
 ```
