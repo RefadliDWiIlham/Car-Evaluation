@@ -44,7 +44,7 @@ safety     = keamanan
 class      = kelas
 ## Data Preparation
 # IMPORT DATASET
-Ini adalah cara mengimport dataset langsung otomatis dari kaggle tanpa mendownload filenya
+Berikut ini adalah cara mengimport dataset langsung otomatis dari kaggle tanpa mendownload filenya
 ```python
 from google.colab import files
 files.upload()
@@ -64,6 +64,7 @@ files.upload()
 !ls car-evaluation-data-set
 ```
 # IMPORT LIBRARY
+Berikut ini adalah library yang saya akan pakai pada projek UAS Mesin Learning kali ini
 ```python
 import numpy as np
 import pandas as pd
@@ -77,6 +78,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn import tree
 ```
 # DATA DISCOVERY
+Ini adalah code untuk perintah "df" agar bisa membaca dataset yang akan digunakan dan menampilkan salah satu datanya
 ```python
 df = pd.read_csv('car-evaluation-data-set/car_evaluation.csv')
 df.sample()
