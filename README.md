@@ -132,7 +132,10 @@ Code ini digunakan untuk melihat isi dari DataFrame dari suatu dataset
 ```python
 df
 ```
+--------------------------------------------------------------------------------
 # EDA
+
+Code ini digunakan untuk membuat peta panas (heatmap) dari nilai-nilai null (kosong) dalam DataFrame df. Setiap sel pada peta panas akan diwarnai sesuai dengan keberadaan nilai null di dalamnya. Jika suatu sel berisi nilai null, maka peta panas akan menunjukkan warna yang berbeda untuk menyoroti kekosongan data tersebut.
 ```python
 sns.heatmap(df.isnull())
 ```
