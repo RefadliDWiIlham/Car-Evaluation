@@ -102,20 +102,27 @@ Contoh, pada kolom pertama ("vhigh"), terdapat 1727 data, terdapat 4 nilai unik,
 ```python
 df.describe()
 ```
-
+--------------------------------------------------------------------------------
 
 Code ini digunakan untuk memberikan informasi ringkas tentang DataFrame tersebut. Outputnya mencakup beberapa informasi penting seperti jumlah baris dan kolom, nama kolom, tipe data setiap kolom, serta jumlah nilai yang tidak kosong (non-null) pada setiap kolom.
 ```python
 df.info()
 ```
+--------------------------------------------------------------------------------
 
 Code ini untuk menghasilkan jumlah nilai-nilai yang kosong untuk setiap kolom dalam DataFrame
 ```python
 df.isna().sum()
 ```
+--------------------------------------------------------------------------------
+
+Code ini digunakan untuk menghitung jumlah nilai unik dalam setiap kolom dari DataFrame,Hasilnya adalah serangkaian nilai yang menunjukkan berapa banyak nilai unik yang ada dalam masing-masing kolom DataFrame tersebut.
 ```python
 df.nunique()
 ```
+--------------------------------------------------------------------------------
+
+
 ```python
 df.duplicated().sum()
 ```
