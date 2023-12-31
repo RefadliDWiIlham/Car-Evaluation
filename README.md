@@ -167,35 +167,65 @@ x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.20, random_
 ```
 # MODELING
 ```python
+dtc = DecisionTreeClassifier(
+    ccp_alpha=0.0, class_weight=None, criterion='entropy',
+    max_depth=4, max_features=None, max_leaf_nodes=None,
+    min_impurity_decrease=0.0, min_samples_leaf=1,
+    min_samples_split=2, min_weight_fraction_leaf=0.0,
+    random_state=42, splitter='best'
+)
 
+model = dtc.fit(x_train, y_train)
+
+dtc_acc = accuracy_score(y_test, dtc.predict(x_test))
+
+print(f"akurasi data training =  {accuracy_score(y_train, dtc.predict(x_train))}")
+print(f"akurasi data testing = {dtc_acc} \n")
+
+print(f"confusion matrix : \n{confusion_matrix(y_test, dtc.predict(x_test))}\n")
+confusion = confusion_matrix(y_test, dtc.predict(x_test))
+print(f"classification report : \n{classification_report(y_test, dtc.predict(x_test))}")
 ```
 ```python
+input_data = (3,	3,	1,	1,	2,	1)
 
+input_data_as_numpy_array = np.array(input_data)
+
+input_data_reshape = input_data_as_numpy_array.reshape(1,-1)
+
+prediction = model.predict(input_data_reshape)
+print(prediction)
+
+if (prediction== 1):
+    print("Kelas yang diprediksi adalah 1.")
+elif (prediction == 2):
+    print("Kelas yang diprediksi adalah 2.")
+elif (prediction == 3):
+    print("Kelas yang diprediksi adalah 3.")
+else:
+    print("Kelas yang diprediksi adalah 4.")
+```
+# VISUALISASI
+```python
+plt.figure(figsize=(12,8))
+
+tree.plot_tree(dtc.fit(x_train, y_train))
+```
+![image](ml7.png)
+```python
+fig = plt.figure(figsize=(30,25))
+_ = tree.plot_tree(model,
+                     feature_names=x_train.columns,
+                     class_names=list(map(str, y_train.unique())),
+                      filled=True, rounded=True
+)
+```
+![image](ml8.png)
+# SAVE MODEL
+```python
+df.to_csv('car-evaluation-data.csv')
 ```
 ```python
-
-```
-```python
-
-```
-```python
-
-```
-```python
-
-```
-```python
-
-```
-```python
-
-```
-```python
-
-```
-```python
-
-```
-```python
-
+filename = 'car-evaluation-data.sav'
+pickle.dump(dtc,open(filename,'wb'))
 ```
