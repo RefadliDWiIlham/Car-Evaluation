@@ -140,12 +140,14 @@ Code ini digunakan untuk membuat peta panas (heatmap) dari nilai-nilai null (kos
 sns.heatmap(df.isnull())
 ```
 ![image](ml1.png)
+
 Code ini digunakan untuk melihat distribusi jumlah data untuk setiap kategori pada variabel 'vhigh', dengan membedakan warnanya berdasarkan kategori pada variabel 'unacc'.
 ```python
 sns.countplot(data=df,x='vhigh',hue='unacc')
 plt.xticks(rotation=45, ha='right');
 ```
 ![image](ml2.png)
+
 Code ini digunakan untuk melihat distribusi jumlah data untuk setiap kategori pada variabel 'vhigh.1', dengan membedakan warnanya berdasarkan kategori pada variabel 'unacc'.
 ```python
 sns.countplot(data=df,x='vhigh.1',hue='unacc')
