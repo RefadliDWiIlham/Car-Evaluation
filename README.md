@@ -125,6 +125,63 @@ df['class'].value_counts().plot(kind='bar')
 ```
 ![image](ml5.png)
 ```python
+sns.countplot(data=df,y='2.1')
+```
+![image](ml6.png)
+# PREPROCESSING
+```python
+col_names = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class']
+
+df.columns = col_names
+
+col_names
+```
+```python
+col_names = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class']
+
+for col in col_names:
+
+    print(df[col].value_counts())
+```
+```python
+le=LabelEncoder()
+```
+```python
+non_numeric_cols=[]
+for col in df.columns:
+    if pd.api.types.is_numeric_dtype(df[col]):
+        pass
+    else:
+        non_numeric_cols.append(col)
+for col in non_numeric_cols:
+    df[col]=le.fit_transform(df[col])
+```
+```python
+atribut = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety']
+x = df[atribut]
+y = df['class']
+x.shape, y.shape
+```
+```python
+x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.20, random_state=0)
+```
+# MODELING
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
+
+```
+```python
 
 ```
 ```python
