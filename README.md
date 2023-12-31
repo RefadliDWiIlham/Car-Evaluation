@@ -93,6 +93,7 @@ Code ini digunakan untuk menghasilkan ringkasan statistik dari DataFrame dalam p
 - unique: Jumlah nilai unik yang ada dalam setiap kolom.
 - top: Nilai yang paling sering muncul dalam setiap kolom.
 - freq: Frekuensi kemunculan nilai yang paling sering dalam setiap kolom.
+
 Contoh, pada kolom pertama ("vhigh"), terdapat 1727 data, terdapat 4 nilai unik, nilai "high" paling sering muncul (432 kali), dan frekuensinya adalah 432. Data ini memberikan gambaran umum tentang distribusi dan karakteristik nilai dalam setiap kolom DataFrame tersebut.
 ```python
 df.describe()
