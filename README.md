@@ -122,10 +122,13 @@ df.nunique()
 ```
 --------------------------------------------------------------------------------
 
-
+ Code ini digunakan untuk menghitung jumlah total baris yang merupakan duplikat dalam DataFrame
 ```python
 df.duplicated().sum()
 ```
+--------------------------------------------------------------------------------
+
+Code ini digunakan untuk melihat isi dari DataFrame dari suatu dataset
 ```python
 df
 ```
