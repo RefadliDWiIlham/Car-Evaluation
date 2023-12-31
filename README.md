@@ -78,14 +78,22 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn import tree
 ```
 # DATA DISCOVERY
-Ini adalah code untuk perintah "df" agar bisa membaca dataset yang akan digunakan dan menampilkan salah satu datanya
+Code ini adalah code untuk perintah "df" agar bisa membaca dataset yang akan digunakan dan menampilkan salah satu datanya
 ```python
 df = pd.read_csv('car-evaluation-data-set/car_evaluation.csv')
 df.sample()
 ```
+Code ini adalah untuk menampilkan 5 data teratas dari dataset yang digunakan
 ```python
 df.head()
 ```
+Code ini digunakan untuk menghasilkan ringkasan statistik dari DataFrame dalam pandas,Kolom-kolom yang terlihat adalah statistik deskriptif untuk setiap kolom dalam DataFrame tersebut. Berikut penjelasan singkatnya:
+
+count: Jumlah total data (observasi) dalam setiap kolom.
+unique: Jumlah nilai unik yang ada dalam setiap kolom.
+top: Nilai yang paling sering muncul dalam setiap kolom.
+freq: Frekuensi kemunculan nilai yang paling sering dalam setiap kolom.
+Contoh, pada kolom pertama ("vhigh"), terdapat 1727 data, terdapat 4 nilai unik, nilai "high" paling sering muncul (432 kali), dan frekuensinya adalah 432. Data ini memberikan gambaran umum tentang distribusi dan karakteristik nilai dalam setiap kolom DataFrame tersebut.
 ```python
 df.describe()
 ```
