@@ -30,7 +30,7 @@ Perusahaan juga bertujuan untuk meningkatkan pengalaman pemilihan kelas mobil ba
     - Model yang dihasilkan dari datasets itu menggunakan metode Linear Regression.
 
 ## Data Understanding
-Dataset yang saya gunakan berasal jadi Kaggle yang berisi Kelas Evaluasi Mobil.Dataset ini mengandung 1726 baris dan lebih dari 7 columns.
+Dataset yang saya gunakan berasal jadi Kaggle yang berisi Kelas Evaluasi Mobil.Dataset ini mengandung 1726 baris dan 7 columns.
 
 https://www.kaggle.com/datasets/elikplim/car-evaluation-data-set
 
@@ -267,3 +267,5 @@ df.to_csv('car-evaluation-data.csv')
 filename = 'car-evaluation-data.sav'
 pickle.dump(dtc,open(filename,'wb'))
 ```
+# EVALUASI
+# DEPLOYMENT
