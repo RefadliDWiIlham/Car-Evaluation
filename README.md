@@ -44,6 +44,7 @@ safety     = keamanan
 class      = kelas
 ## Data Preparation
 # IMPORT DATASET
+Ini adalah cara mengimport dataset langsung otomatis dari kaggle tanpa mendownload filenya
 ```python
 from google.colab import files
 files.upload()
