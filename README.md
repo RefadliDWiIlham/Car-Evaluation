@@ -4,7 +4,7 @@
 ### Kelas : Pagi B
 
 ## Domain Proyek
-Evaluasi Mobil ini bisa digunakan sebagai patokan bagi semua yang ingin mengetahui penilaian kelas yang sesuai dengan kebutuhan konsumen maupun bisnis untuk menjamin kepuasanmya
+Evaluasi Mobil ini bisa digunakan sebagai patokan bagi semua yang ingin mengetahui penilaian kelas yang sesuai dengan kebutuhan konsumen maupun bisnis untuk menjamin kepuasannya
 ## Business Understanding
 
 Industri otomotif  berkembang seiring dengan perubahan kebutuhan konsumen akan kendaraan pribadi.
