@@ -83,10 +83,14 @@ Code ini adalah code untuk perintah "df" agar bisa membaca dataset yang akan dig
 df = pd.read_csv('car-evaluation-data-set/car_evaluation.csv')
 df.sample()
 ```
+
+
 Code ini adalah untuk menampilkan 5 data teratas dari dataset yang digunakan
 ```python
 df.head()
 ```
+
+
 Code ini digunakan untuk menghasilkan ringkasan statistik dari DataFrame dalam pandas,Kolom-kolom yang terlihat adalah statistik deskriptif untuk setiap kolom dalam DataFrame tersebut. Berikut penjelasan singkatnya:
 
 - count: Jumlah total data (observasi) dalam setiap kolom.
