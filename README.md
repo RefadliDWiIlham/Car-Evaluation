@@ -140,35 +140,38 @@ Code ini digunakan untuk membuat peta panas (heatmap) dari nilai-nilai null (kos
 sns.heatmap(df.isnull())
 ```
 ![image](ml1.png)
-
+--------------------------------------------------------------------------------
 Code ini digunakan untuk melihat distribusi jumlah data untuk setiap kategori pada variabel 'vhigh', dengan membedakan warnanya berdasarkan kategori pada variabel 'unacc'.
 ```python
 sns.countplot(data=df,x='vhigh',hue='unacc')
 plt.xticks(rotation=45, ha='right');
 ```
 ![image](ml2.png)
-
+--------------------------------------------------------------------------------
 Code ini digunakan untuk melihat distribusi jumlah data untuk setiap kategori pada variabel 'vhigh.1', dengan membedakan warnanya berdasarkan kategori pada variabel 'unacc'.
 ```python
 sns.countplot(data=df,x='vhigh.1',hue='unacc')
 plt.xticks(rotation=45, ha='right');
 ```
 ![image](ml3.png)
+--------------------------------------------------------------------------------
 Code ini digunakan untuk menampilkan perhitungan Unacc (Class) dimana Class 1(unacc) lebih tinggi dari class lainnya
 ```python
 sns.histplot(x="unacc",data=df ,color = 'rosybrown')
 ```
 ![image](ml4.png)
-
+--------------------------------------------------------------------------------
 kode ini mengakses kolom 'unacc' dalam DataFrame, menghitung jumlah kemunculan setiap nilai unik, dan kemudian membuat diagram batang dari hasil tersebut. Diagram batang akan menunjukkan seberapa sering setiap nilai unik muncul dalam kolom 'unacc'.
 ```python
 df['unacc'].value_counts().plot(kind='bar')
 ```
 ![image](ml5.png)
+--------------------------------------------------------------------------------
 ```python
 sns.countplot(data=df,y='2.1')
 ```
 ![image](ml6.png)
+--------------------------------------------------------------------------------
 # PREPROCESSING
 ```python
 col_names = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class']
