@@ -159,6 +159,7 @@ Code ini digunakan untuk menampilkan perhitungan Unacc (Class) dimana Class 1(un
 sns.histplot(x="unacc",data=df ,color = 'rosybrown')
 ```
 ![image](ml4.png)
+
 kode ini mengakses kolom 'unacc' dalam DataFrame, menghitung jumlah kemunculan setiap nilai unik, dan kemudian membuat diagram batang dari hasil tersebut. Diagram batang akan menunjukkan seberapa sering setiap nilai unik muncul dalam kolom 'unacc'.
 ```python
 df['unacc'].value_counts().plot(kind='bar')
