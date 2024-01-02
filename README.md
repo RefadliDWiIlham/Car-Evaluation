@@ -199,10 +199,12 @@ for col in col_names:
     print(df[col].value_counts())
 ```
 --------------------------------------------------------------------------------
+Code ini digunakan untuk mendefinisikan le sebagai LabelEncoder
 ```python
 le=LabelEncoder()
 ```
 --------------------------------------------------------------------------------
+Code ini digunakan untuk mengubah nilai non-numeric dalam suatu DataFrame menjadi nilai numerik menggunakan LabelEncoder dari library pandas.
 ```python
 non_numeric_cols=[]
 for col in df.columns:
@@ -214,6 +216,7 @@ for col in non_numeric_cols:
     df[col]=le.fit_transform(df[col])
 ```
 --------------------------------------------------------------------------------
+Code ini adalah untuk menentukan mana yang akan jadi atribut dan mana yang menjadi label
 ```python
 atribut = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety']
 x = df[atribut]
@@ -221,11 +224,45 @@ y = df['class']
 x.shape, y.shape
 ```
 --------------------------------------------------------------------------------
+Code ini adalah bagian dari penggunaan library scikit-learn untuk membagi dataset menjadi dua bagian: data latih (training data) dan data uji (testing data). Fungsi utama dari kode ini adalah untuk melakukan pembagian dataset menjadi empat variabel:
+
+- x_train: Subset dari dataset x yang akan digunakan sebagai data latih.
+- x_test: Subset dari dataset x yang akan digunakan sebagai data uji.
+- y_train: Subset dari dataset y yang sesuai dengan x_train, digunakan sebagai label untuk data latih.
+- y_test: Subset dari dataset y yang sesuai dengan x_test, digunakan sebagai label untuk data uji.
 ```python
 x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.20, random_state=0)
 ```
 --------------------------------------------------------------------------------
 # MODELING
+Code Python ini menggunakan DecisionTreeClassifier dari scikit-learn untuk membuat dan melatih model pohon keputusan. Berikut adalah penjelasan fungsi-fungsi utama dalam kode tersebut:
+
+# DecisionTreeClassifier:
+
+- ccp_alpha=0.0: Parameter yang mengontrol kompleksitas pohon dengan Cost-Complexity Pruning. Nilai alpha yang lebih tinggi akan menghasilkan pohon yang lebih sederhana.
+- class_weight=None: Menentukan bobot untuk kelas. Dapat digunakan untuk menangani ketidakseimbangan kelas dalam dataset.
+- criterion='entropy': Kriteria untuk mengukur kualitas split. 'Entropy' menggunakan metode entropi untuk mengukur ketidakmurnian.
+- max_depth=4: Kedalaman maksimum pohon keputusan.
+- max_features=None: Jumlah fitur yang harus dipertimbangkan saat mencari split terbaik.
+- max_leaf_nodes=None: Jumlah daun maksimum dalam pohon.
+- min_impurity_decrease=0.0: Ambang batas untuk melakukan split berdasarkan pengurangan impurity.
+- min_samples_leaf=1: Jumlah sampel minimum yang diperlukan di setiap leaf node.
+- min_samples_split=2: Jumlah sampel minimum yang diperlukan untuk melakukan split pada node internal.
+- min_weight_fraction_leaf=0.0: Jumlah minimum total berat sampel yang diperlukan di setiap leaf node.
+- random_state=42: Seed untuk mengontrol keacakannya sehingga hasilnya dapat direproduksi.
+- splitter='best': Strategi untuk memilih split di setiap node. 'Best' memilih split terbaik.
+# Training Model:
+
+model = dtc.fit(x_train, y_train): Melatih model menggunakan data pelatihan (x_train dan y_train).
+# Evaluasi Model:
+
+dtc_acc = accuracy_score(y_test, dtc.predict(x_test)): Mengukur akurasi model pada data pengujian (x_test dan y_test).
+Mencetak akurasi data pelatihan dan pengujian, serta confusion matrix dan classification report untuk evaluasi model.
+Hasil Output:
+
+- Mencetak akurasi data pelatihan dan pengujian.
+- Mencetak confusion matrix, yang memberikan gambaran tentang performa model pada setiap kelas.
+- Mencetak classification report, yang memberikan informasi lebih rinci tentang precision, recall, dan f1-score untuk setiap kelas.
 ```python
 dtc = DecisionTreeClassifier(
     ccp_alpha=0.0, class_weight=None, criterion='entropy',
@@ -246,6 +283,7 @@ print(f"confusion matrix : \n{confusion_matrix(y_test, dtc.predict(x_test))}\n")
 confusion = confusion_matrix(y_test, dtc.predict(x_test))
 print(f"classification report : \n{classification_report(y_test, dtc.predict(x_test))}")
 ```
+--------------------------------------------------------------------------------
 ```python
 input_data = (3,	3,	1,	1,	2,	1)
 
