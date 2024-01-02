@@ -348,8 +348,8 @@ model = dtc.fit(x_train, y_train)
 
 dtc_acc = accuracy_score(y_test, dtc.predict(x_test))
 ```
-akurasi data training =  0.8283852280955829
-akurasi data testing = 0.8121387283236994 
+- akurasi data training =  0.8283852280955829
+- akurasi data testing = 0.8121387283236994 
 # DEPLOYMENT
 Berikut adalah link streamlitnya
 
