@@ -173,6 +173,11 @@ sns.countplot(data=df,y='2.1')
 ![image](ml6.png)
 --------------------------------------------------------------------------------
 # PREPROCESSING
+col_names = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class']: Membuat sebuah list dengan nama kolom baru yang diinginkan. Setiap elemen dalam list ini akan menjadi nama kolom pada DataFrame.
+
+df.columns = col_names: Mengassign (mengganti) nama kolom pada DataFrame df dengan nama kolom yang baru di definisikan sebelumnya dalam col_names. Dengan kata lain, kolom-kolom pada DataFrame akan diubah sesuai dengan urutan nama kolom yang ada dalam col_names.
+
+col_names: Mengembalikan list yang berisi nama kolom baru setelah diubah pada DataFrame. Ini tidak mempengaruhi DataFrame itu sendiri, tetapi memberikan informasi tentang nama kolom yang baru ditetapkan.
 ```python
 col_names = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class']
 
