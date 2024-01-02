@@ -186,6 +186,11 @@ df.columns = col_names
 col_names
 ```
 --------------------------------------------------------------------------------
+Code ini digunakan untuk menampilkan jumlah kemunculan nilai unik dalam setiap kolom dari sebuah DataFrame, yang diasumsikan sebagai df. DataFrame tersebut memiliki kolom dengan nama yang telah ditentukan dalam list col_names, yaitu ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class'].
+
+Dalam setiap iterasi loop for, kode menggunakan fungsi value_counts() pada kolom yang sedang diproses (df[col]). Fungsi ini menghitung jumlah kemunculan setiap nilai unik dalam kolom tersebut dan mengembalikan hasilnya dalam bentuk objek Pandas Series. Kemudian, hasil tersebut dicetak ke layar menggunakan fungsi print().
+
+Dengan cara ini, kita dapat melihat distribusi nilai unik untuk setiap kolom dalam DataFrame, memberikan pemahaman tentang variasi data di setiap fitur.
 ```python
 col_names = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class']
 
