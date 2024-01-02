@@ -185,6 +185,7 @@ df.columns = col_names
 
 col_names
 ```
+--------------------------------------------------------------------------------
 ```python
 col_names = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class']
 
@@ -192,9 +193,11 @@ for col in col_names:
 
     print(df[col].value_counts())
 ```
+--------------------------------------------------------------------------------
 ```python
 le=LabelEncoder()
 ```
+--------------------------------------------------------------------------------
 ```python
 non_numeric_cols=[]
 for col in df.columns:
@@ -205,15 +208,18 @@ for col in df.columns:
 for col in non_numeric_cols:
     df[col]=le.fit_transform(df[col])
 ```
+--------------------------------------------------------------------------------
 ```python
 atribut = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety']
 x = df[atribut]
 y = df['class']
 x.shape, y.shape
 ```
+--------------------------------------------------------------------------------
 ```python
 x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.20, random_state=0)
 ```
+--------------------------------------------------------------------------------
 # MODELING
 ```python
 dtc = DecisionTreeClassifier(
