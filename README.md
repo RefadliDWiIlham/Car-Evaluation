@@ -284,6 +284,7 @@ confusion = confusion_matrix(y_test, dtc.predict(x_test))
 print(f"classification report : \n{classification_report(y_test, dtc.predict(x_test))}")
 ```
 --------------------------------------------------------------------------------
+Code Python tersebut bertujuan untuk melakukan prediksi kelas berdasarkan model yang telah di-train menggunakan data masukan dan menampilkan hasilnya yang sudah ditentukan prediction
 ```python
 input_data = (3,	3,	1,	1,	2,	1)
 
@@ -304,6 +305,9 @@ else:
     print("Kelas yang diprediksi adalah 4.")
 ```
 # VISUALISASI
+
+Berikut ini adalah visualisasi dari dataset yang menjadi pohon keputusan
+
 ```python
 plt.figure(figsize=(12,8))
 
@@ -320,6 +324,9 @@ _ = tree.plot_tree(model,
 ```
 ![image](ml8.png)
 # SAVE MODEL
+
+Code ini adalah untuk menyimpan dataset yang sudah di PREPROCESSING dan do MODELING
+
 ```python
 df.to_csv('car-evaluation-data.csv')
 ```
@@ -329,3 +336,6 @@ pickle.dump(dtc,open(filename,'wb'))
 ```
 # EVALUASI
 # DEPLOYMENT
+Berikut adalah link streamlitnya
+
+https://car-evaluation-guadli.streamlit.app/
